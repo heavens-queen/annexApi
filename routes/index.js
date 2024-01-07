@@ -61,7 +61,7 @@ const storeTemp = multer({ dest: path.join(os.tmpdir(), "mediaglens") });
  *           description: UserId obtained upon regestration.
  *           required: true
  *           schema:
- *             type: integer
+ *             type: string
  *         - in: query
  *           name: width
  *           description: Width of the image.
