@@ -21,9 +21,13 @@ import { destroyFileDocsContainer } from "../DOCS/DestroyFileDocContainer/index.
 // import deleteUser from "../Controllers/users/deleteUsers.js";
 const router = express.Router();
 const storage = multer.memoryStorage();
-const upload = multer({ storage: storage });
-
-
+const upload = multer({
+    storage: storage,
+    limits: {
+      fileSize: 5 * 1024 * 1024, // 5 MB (in bytes)
+    },
+  });
+  
 router.get("/api", (req, res) => {
     res.send("api working succesful!");
 });
