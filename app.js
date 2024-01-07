@@ -19,6 +19,10 @@ app.get("/", (req, res, next) => {
 app.use(router);
 //swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+app.get("/ping", (req, res) => {
+    res.status(200).send("pong");
+});
+
 app.use("*", (req, res, next) => {
     // Simulate a 404 error
     next(new createHttpError.NotFound(`The requested resource ${req.originalUrl} does not exist`));
