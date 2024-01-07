@@ -14,7 +14,7 @@ app.use(logger("dev"));
 app.use(express.json());
 app.disable('x-powered-by');
 app.get("/", (req, res, next) => {
-    res.send("car hub api");
+    res.send({message:"welcome to mediaglensApi ",author:"Glen Ayienda"});
 });
 app.use(router);
 //swagger
