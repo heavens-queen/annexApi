@@ -38,7 +38,7 @@ Whether you're working with images, documents, or other digital media, MediaGlen
         },
         servers: [
             {
-                url: "http://localhost:8080",
+                url: "https://apimediaglens.cyclic.app",
             },
         ],
         tags: [
@@ -47,7 +47,7 @@ Whether you're working with images, documents, or other digital media, MediaGlen
                 description: "Operations related to images",
                 externalDocs: {
                     description: "**View code implimentation examples**",
-                    url: "https://path-to-your-documentation/code-examples"
+                    url: "https://mediaglens.vercel.app/docs/category/images-section"
                 }
             },
             {
@@ -55,7 +55,7 @@ Whether you're working with images, documents, or other digital media, MediaGlen
                 description: "Operations related to videos",
                 externalDocs: {
                     description: "**View code implimentation examples**",
-                    url: "https://path-to-your-documentation/code-examples"
+                    url: "https://mediaglens.vercel.app/docs/category/videos-section"
                 }
             },
             {
@@ -63,7 +63,7 @@ Whether you're working with images, documents, or other digital media, MediaGlen
                 description: "Operations related to files i.e PDFS,DOCX,PPTS,XLSX",
                 externalDocs: {
                     description: "**View code implimentation examples**",
-                    url: "https://path-to-your-documentation/code-examples"
+                    url: "https://mediaglens.vercel.app/docs/category/files-section"
                 }
             }
         ],
