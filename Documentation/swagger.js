@@ -29,16 +29,16 @@ Whether you're working with images, documents, or other digital media, MediaGlen
             },
             license: {
                 name: " LICENSE MIT",
-                url: "https://mediaglens.com/Licence"
+                url: "https://mediaglens.vercel.app/Licence"
             },
         },
         externalDocs: {
             description: `**VIEW CODE EXAMPLES**`,
-            url: "https://path-to-your-documentation/code-examples",
+            url: "https://mediaglens.vercel.app/docs/",
         },
         servers: [
             {
-                url: "https://apimediaglens.cyclic.app",
+                url: "https://apimediaglens.cyclic.app/",
             },
         ],
         tags: [
@@ -84,7 +84,7 @@ Whether you're working with images, documents, or other digital media, MediaGlen
             },
         },
     },
-    apis: ["src/routes/index.ts"],
+    apis: ["routes/index.js"],
 };
 export const specs = swaggerJsDoc(swaggerOptions);
 //# sourceMappingURL=swagger.js.map

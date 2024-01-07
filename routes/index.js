@@ -22,6 +22,8 @@ import { destroyFileDocsContainer } from "../DOCS/DestroyFileDocContainer/index.
 const router = express.Router();
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
+
+
 router.get("/api", (req, res) => {
     res.send("api working succesful!");
 });
@@ -30,6 +32,8 @@ router.get("/api", (req, res) => {
 //   router.route('/api/users/').get(getAllUsers);
 //   router.route('/api/users/:id').get(getSingleUser).patch(authenticateToken,UpdateUser).delete(authenticateToken,deleteUser)
 const storeTemp = multer({ dest: path.join(os.tmpdir(), "mediaglens") });
+
+
 // images
 /**
  *   @openapi
