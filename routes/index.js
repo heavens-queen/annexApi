@@ -56,10 +56,12 @@ const storeTemp = multer({ dest: path.join(os.tmpdir(), "mediaglens") });
  *           name: x-api-key
  *           description: API key
  *           required: true
- *         - in: header
- *           name: x-user-id
- *           description: User ID
+ *         - in: query
+ *           name: userId
+ *           description: UserId obtained upon regestration.
  *           required: true
+ *           schema:
+ *             type: integer
  *         - in: query
  *           name: width
  *           description: Width of the image.
