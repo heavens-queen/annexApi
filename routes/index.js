@@ -56,12 +56,10 @@ const storeTemp = multer({ dest: path.join(os.tmpdir(), "mediaglens") });
  *           name: x-api-key
  *           description: API key
  *           required: true
- *         - in: query
+ *         - in:  Query
  *           name: userId
- *           description: UserId obtained upon regestration.
+ *           description: User ID given upon registation
  *           required: true
- *           schema:
- *             type: string
  *         - in: query
  *           name: width
  *           description: Width of the image.
@@ -166,9 +164,9 @@ router.put("/api/upload-images/", upload.array("images"), UploadImages);
  *           name: x-api-key
  *           description: API key
  *           required: true
- *         - in: header
- *           name: x-user-id
- *           description: User ID
+ *         - in:  Query
+ *           name: userId
+ *           description: User ID given upon registation
  *           required: true
  *       requestBody:
  *         content:
@@ -227,9 +225,9 @@ router.delete("/api/delete-images/", deleteImageAndThumbnail);
  *           name: x-api-key
  *           description: API key
  *           required: true
- *         - in: header
- *           name: x-user-id
- *           description: User ID
+ *         - in:  Query
+ *           name: userId
+ *           description: User ID given upon registation
  *           required: true
  *       responses:
  *         "200":
@@ -272,9 +270,9 @@ router.delete("/api/destroy-images-folder/", deleteImagesContainer);
  *           name: x-api-key
  *           description: API key
  *           required: true
- *         - in: header
- *           name: x-user-id
- *           description: User ID
+ *         - in:  Query
+ *           name: userId
+ *           description: User ID given upon registation
  *           required: true
  *       requestBody:
  *         required: true
@@ -337,9 +335,9 @@ router.put("/api/upload-video/", storeTemp.single("video"), uploadVideo);
  *           name: x-api-key
  *           description: API key
  *           required: true
- *         - in: header
- *           name: x-user-id
- *           description: User ID
+ *         - in:  Query
+ *           name: userId
+ *           description: User ID given upon registation
  *           required: true
  *       requestBody:
  *         required: true
@@ -391,7 +389,7 @@ router.delete("/api/delete-video/", deleteVideoAndThumbnail);
 
  *         Delete the entire video upload folder associated with the user. This operation is irreversible and will result in the deletion of all videos uploaded by the user. Use with caution.
 
- *         The operation requires the following headers: `x-api-key` and `x-user-id`.
+ *         The operation requires the following headers: `x-api-key` and `userId `.
 
  *       security:
  *         - ApiKeyAuth: []
@@ -401,9 +399,9 @@ router.delete("/api/delete-video/", deleteVideoAndThumbnail);
  *           name: x-api-key
  *           description: API key
  *           required: true
- *         - in: header
- *           name: x-user-id
- *           description: User ID
+ *         - in:  Query
+ *           name: userId
+ *           description: User ID given upon registation
  *           required: true
  *       responses:
  *         "200":
@@ -452,9 +450,9 @@ router.delete("/api/destroy-User-folder/", deleteUsersFiles);
  *           name: x-api-key
  *           description: API key
  *           required: true
- *         - in: header
- *           name: x-user-id
- *           description: User ID
+ *         - in:  Query
+ *           name: userId
+ *           description: User ID given upon registation
  *           required: true
  *       requestBody:
  *         content:
@@ -518,9 +516,9 @@ router.put("/api/upload-files/", storeTemp.array("files"), uploadFiles);
  *           name: x-api-key
  *           description: API key
  *           required: true
- *         - in: header
- *           name: x-user-id
- *           description: User ID
+ *         - in:  Query
+ *           name: userId
+ *           description: User ID given upon registation
  *           required: true
  *       requestBody:
  *         content:
@@ -570,9 +568,9 @@ router.delete("/api/delete-file/", deleteFilesDocs);
  *           name: x-api-key
  *           description: API key
  *           required: true
- *         - in: header
- *           name: x-user-id
- *           description: User ID
+ *         - in:  Query
+ *           name: userId
+ *           description: User ID given upon registation
  *           required: true
  *       responses:
  *         "200":
