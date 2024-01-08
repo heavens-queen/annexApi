@@ -5,9 +5,13 @@ import swaggerUi from 'swagger-ui-express';
 import logger from 'morgan';
 import router from "./routes/index.js";
 import { specs } from "./Documentation/swagger.js";
+import cors from 'cors';
 config();
 const app = express();
 const port = Number(process.env.Port) || 8080;
+
+app.use(cors());
+
 app.use(logger("dev"));
 // app.use(logger(':method :url :status :res[content-length] - :response-time ms :user-agent'));
 //middlewares
