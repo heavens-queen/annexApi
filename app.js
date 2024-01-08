@@ -10,7 +10,7 @@ config();
 const app = express();
 const port = Number(process.env.Port) || 8080;
 
-app.use(cors());
+app.use(cors('*'));
 
 app.use(logger("dev"));
 // app.use(logger(':method :url :status :res[content-length] - :response-time ms :user-agent'));
